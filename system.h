@@ -22,7 +22,9 @@ public:
     ~System();
     void resetForcesOnAllAtoms();
     void createFCCLattice(int numberOfUnitCellsEachDimension, double latticeConstant, double temperature);
-    void applyPeriodicBoundaryConditions();
+    //void applyPeriodicBoundaryConditions();
+    void applyPeriodicBoundaryConditions(vec3 &position, vec3 &initialPosition);
+    void applyPeriodicBoundaryConditions(vec3 &position);
     void removeTotalMomentum();
     void calculateForces();
     void step(double dt);

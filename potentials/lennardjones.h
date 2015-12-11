@@ -1,5 +1,6 @@
 #ifndef LENNARDJONES_H
 #define LENNARDJONES_H
+#include <cmath>
 #include "potential.h"
 
 class LennardJones : public Potential

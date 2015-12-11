@@ -2,6 +2,9 @@ TEMPLATE = app
 CONFIG += console c++11
 CONFIG -= app_bundle
 CONFIG -= qt
+CONFIG -= fopenmp
+QMAKE_CXXFLAGS += -fopenmp
+QMAKE_LFLAGS += -fopenmp
 
 QMAKE_CXX += -g
 
@@ -17,7 +20,8 @@ SOURCES += main.cpp \
     potentials/lennardjones.cpp \
     statisticssampler.cpp \
     integrators/eulercromer.cpp \
-    unitconverter.cpp
+    unitconverter.cpp \
+    unittests.cpp
 
 HEADERS += \
     atom.h \
@@ -31,5 +35,6 @@ HEADERS += \
     potentials/lennardjones.h \
     statisticssampler.h \
     integrators/eulercromer.h \
-    unitconverter.h
+    unitconverter.h \
+    unittests.h
 

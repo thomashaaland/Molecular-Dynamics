@@ -10,6 +10,7 @@ public:
     vec3 position;
     vec3 velocity;
     vec3 force;
+    vec3 initialPosition;
 
     Atom(double mass);
     void resetForce();
@@ -17,5 +18,7 @@ public:
 
     double mass() { return m_mass; }
     void setMass(double mass) { m_mass = mass; }
+
+    void meanSquareDispacement();
 };
 #endif
